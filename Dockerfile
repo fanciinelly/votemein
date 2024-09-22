@@ -21,10 +21,13 @@ RUN a2enmod rewrite
 WORKDIR /var/www/html
 
 # Copy application files
-COPY . /var/www/html/
+COPY dbh.inc.php /var/www/html/public/dbh.inc.php
 
 # Copy Apache configuration
 COPY 000-default.conf /etc/apache2/sites-available/000-default.conf
+
+# image folder
+COPY ig-pics /var/www/html/ig-pics
 
 # Install Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer

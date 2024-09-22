@@ -1,6 +1,6 @@
 <?php
 // Include the database connection file
-require_once 'dbh.inc.php';
+require_once('/var/www/html/public/dbh.inc.php');
 
 // Include PHPMailer classes
 use PHPMailer\PHPMailer\PHPMailer;
