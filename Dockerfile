@@ -21,7 +21,7 @@ RUN a2enmod rewrite
 WORKDIR /var/www/html
 
 # Copy application files
-COPY dbh.inc.php /var/www/html/public/dbh.inc.php
+COPY . /var/www/html
 
 # Copy Apache configuration
 COPY 000-default.conf /etc/apache2/sites-available/000-default.conf
