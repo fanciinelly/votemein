@@ -23,11 +23,11 @@ WORKDIR /var/www/html
 # Copy application files
 COPY . /var/www/html
 
-# Copy Apache configuration
-COPY 000-default.conf /etc/apache2/sites-available/000-default.conf
-
 # image folder
 COPY ig-pics /var/www/html/ig-pics
+
+# Copy Apache configuration
+COPY 000-default.conf /etc/apache2/sites-available/000-default.conf
 
 # Install Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
@@ -37,6 +37,8 @@ RUN composer install --no-dev --optimize-autoloader
 
 # Set permissions
 RUN chown -R www-data:www-data /var/www/html
+
+RUN chmod -R 755 /var/www/html
 
 # Expose port 80
 EXPOSE 80
