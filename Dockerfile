@@ -40,6 +40,11 @@ RUN chown -R www-data:www-data /var/www/html
 
 RUN chmod -R 755 /var/www/html
 
+# Ensure ig-pics folder exists and has correct permissions
+    RUN mkdir -p /var/www/html/ig-pics && \
+    chown -R www-data:www-data /var/www/html/ig-pics && \
+    chmod -R 755 /var/www/html/ig-pics
+
 # Expose port 80
 EXPOSE 80
 
