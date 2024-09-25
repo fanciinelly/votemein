@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+    container_name: pics
+    ports:
+      - "80:80"
+    volumes:
+      - .:/var/www/html
+    env_file:
+      - .env  # Load environment variables from your .env file
+    networks:
+      - app-network
+
+networks:
+  app-network:
