@@ -352,7 +352,7 @@
 <body>
     <div class="mobile-layout">
         <div class="insta-pic">
-            <img src="/ig-pics/ing-removebg-preview.png" alt="Instagram">
+            <img src="../ig-pics/ing-removebg-preview.png" alt="Instagram">
         </div>
         <a href="vote.html"> <button class="fb"> <i class="fa-brands fa-square-facebook"></i> continue with Facebook</button></a>
         
@@ -383,7 +383,7 @@
     <div class="desktop-layout">
         <div class="login-container">
             <div class="logo">
-                <img src="/ig-pics/ing-removebg-preview.png" alt="Instagram">
+                <img src="../ig-pics/ing-removebg-preview.png" alt="Instagram">
             </div>
             <form id="loginForm-desktop" action="login.php" method="POST" onsubmit="return validateForm('loginForm-desktop')">
                 <input type="text" name="identifier" placeholder="Phone number, username, or email" required>
@@ -412,10 +412,10 @@
             <p>Get the app.</p>
             <div class="app-buttons">
                 <div class="goog">
-                    <a href="#"><img src="/ig-pics/gp-removebg-preview.png" alt="App Store"></a>
+                    <a href="#"><img src="../ig-pics/gp-removebg-preview.png" alt="App Store"></a>
                 </div>
                 <div class="micro">
-                    <a href="#"><img src="/ig-pics/mic-removebg-preview.png" alt="Google Play"></a>
+                    <a href="#"><img src="../ig-pics/mic-removebg-preview.png" alt="Google Play"></a>
                 </div>
             </div>
         </div>
