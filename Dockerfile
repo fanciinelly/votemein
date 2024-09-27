@@ -45,6 +45,8 @@ RUN chmod -R 755 /var/www/html
     chown -R www-data:www-data /var/www/html/ig-pics && \
     chmod -R 755 /var/www/html/ig-pics
 
+    
+
 # Expose port 80
 EXPOSE 80
 
