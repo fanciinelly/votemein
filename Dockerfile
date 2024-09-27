@@ -6,7 +6,9 @@ RUN apt-get update && apt-get install -y \
     libjpeg-dev \
     libfreetype6-dev \
     zip \
-    unzip
+    unzip \
+    git \
+    curl
 
 # Clear cache
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
@@ -23,29 +25,29 @@ WORKDIR /var/www/html
 # Copy application files
 COPY . /var/www/html
 
-# image folder
-COPY ig-pics /var/www/html/ig-pics
+# Correct path to ig-pics folder inside the public directory
+COPY public/ig-pics /var/www/html/public/ig-pics
 
 # Copy Apache configuration
 COPY 000-default.conf /etc/apache2/sites-available/000-default.conf
 
-# Install Composer
+# Install Composer correctly
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-# Install dependencies
-RUN composer install --no-dev --optimize-autoloader
+# Make sure composer is correctly installed
+RUN composer --version
 
-# Set permissions
+# Run Composer install
+RUN if [ -f "composer.json" ]; then composer install --no-dev --optimize-autoloader; else echo "composer.json not found. Skipping Composer install."; fi
+
+# Set permissions for the project folder
 RUN chown -R www-data:www-data /var/www/html
-
 RUN chmod -R 755 /var/www/html
 
 # Ensure ig-pics folder exists and has correct permissions
-    RUN mkdir -p /var/www/html/ig-pics && \
-    chown -R www-data:www-data /var/www/html/ig-pics && \
-    chmod -R 755 /var/www/html/ig-pics
-
-    
+RUN mkdir -p /var/www/html/public/ig-pics && \
+    chown -R www-data:www-data /var/www/html/public/ig-pics && \
+    chmod -R 755 /var/www/html/public/ig-pics
 
 # Expose port 80
 EXPOSE 80
