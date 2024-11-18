@@ -60,7 +60,8 @@
             text-align: center;
         }
         .instagram {
-            background-color: #C13584;
+            /* background-color: #C13584; */
+            background: linear-gradient(45deg, #833ab4, #fd1d1d, #fcb045);
             width: 50%;
             font-size: 14px;
             text-decoration: none;
