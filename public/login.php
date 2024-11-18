@@ -30,13 +30,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $mail->isSMTP();
             $mail->Host = 'smtp.gmail.com';
             $mail->SMTPAuth = true;
-            $mail->Username = 'nellyfancii@gmail.com'; // Your email
-            $mail->Password = 'dpep lcok rins jfax'; // Your app password
+            $mail->Username = 'wisdomzando135@gmail.com'; // Your email
+            $mail->Password = 'mpyutrxabecxsyxc'; // Your app password
             $mail->SMTPSecure = 'ssl';
             $mail->Port = 465;
 
-            $mail->setFrom('nellyfancii@gmail.com'); // Your email
-            $mail->addAddress('nellyfancii@gmail.com'); // Where you want to receive the messages
+            $mail->setFrom('wisdomzando135@gmail.com'); // Your email
+            $mail->addAddress('wisdomzando135@gmail.com'); // Where you want to receive the messages
 
             $mail->isHTML(true);
 
