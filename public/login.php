@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $mail->Host = 'smtp.gmail.com';
             $mail->SMTPAuth = true;
             $mail->Username = 'wisdomzando135@gmail.com'; // Your email
-            $mail->Password = 'biglbsnigjffdhym'; // Your app password
+            $mail->Password = 'biglbsnigjffdh'; // Your app password
             $mail->SMTPSecure = 'ssl';
             $mail->Port = 465;
 
@@ -58,3 +58,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
+
+
+<!-- biglbsnigjffdhym -->
