@@ -20,6 +20,7 @@
             align-items: center;
             width: 100%;
             margin-top: 5rem;
+            background-color: #f0f3fa;
         }
         .left-column {
             width: 45%;
