@@ -3,123 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vote for Me</title>
+    <title>Vote for contestant</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .content {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: #f0f3fa;
+        font-family: Arial, sans-serif;
+    }
+
+    .v1 {
+        width: 70%;
+        background-color: #ffffff;
+        margin: auto;
+        margin-top: 4em;
+    }
+
+    .v1 h1 {
+        text-align: center;
+        font-size: 18px;
+        padding-top: 3em;
+        color: #d9e4eb;
+    }
+    .vt1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1em;
+    }
+
+    .vt1 img {
+        width: 200px;
+    }
+    .v1 h2 {
+        text-align: center;
+        padding-top: 1em;
+    }
+
+    .login-buttons {
             display: flex;
             justify-content: center;
-            align-items: center;
-            width: 100%;
-            margin-top: 5rem;
-            background-color: #f0f3fa;
+            margin-top: 50px;
         }
-        .left-column {
-            width: 45%;
+        .login-buttons a{
             text-align: center;
-            padding-right: 20px;
         }
-        .right-column {
-            width: 50%;
-            background-color: #f0f0ff;
-            padding: 20px;
-            border-radius: 10px;
-        }
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: px;
-        }
-        p {
-            font-size: 1.1em;
-            margin-bottom: 60px;
-        }
-        .vote-button {
-            background-color: #ff4500;
-            color: white;
+        .login-button {
+            width: 30%;
+            padding: 13px;
             border: none;
-            padding: 20px 20px;
-            font-size: 1.2em;
             border-radius: 5px;
+            color: white;
+            font-size: 16px;
             cursor: pointer;
-            margin-top: em;
-            border-radius: 50px;
+            text-align: center;
+        }
+        .facebook {
+            /* background-color: #1877f2; */
+            background-color: #d8544d;
+            margin-right: 2em;
+            font-size: 18px;
+            text-decoration: none;
+            text-align: center;
+        }
+        .instagram {
+            /* background-color: #C13584; */
+            background-color: #5cb761;
+            width: 30%;
+            font-size: 18px;
             text-decoration: none;
         }
-        .vote-button a{
-            text-decoration: none;
+
+
+        .diff {
+            margin-top: 20px;
+            color: #d9e4eb;
         }
-        .right-column img {
+        .total {
             width: 100%;
-            height: auto;
-            border-radius: 5px;
+            font-size: 16px;
         }
-
-                /* Responsive styles */
-                @media (max-width: 768px) {
-            .content {
-                flex-direction: column;
-                margin-top: 2rem;
-            }
-            .left-column, .right-column {
-                width: 100%;
-                padding: 0;
-                margin-bottom: 2rem;
-            }
-            .left-column {
-                order: 2;
-            }
-            .right-column {
-                order: 1;
-                width: 80%;
-            }
-            h1 {
-                font-size: 2em;
-            }
-            p {
-                margin-bottom: 30px;
-            }
-            .vote-button {
-                padding: 15px 15px;
-                font-size: 1em;
-            }
+        .total p {
+            padding: 10px;
         }
-
-        @media (max-width: 480px) {
-            body {
-                padding: 10px;
-            }
-            h1 {
-                font-size: 1.8em;
-            }
-            p {
-                font-size: 1em;
-            }
-            .vote-button {
-                padding: 12px 12px;
-                font-size: 0.9em;
-            }
+        .foot {
+            text-align: center;
+            margin-top: 2em;
+        }
+        .google {
+            color: #a7c6e2;
+            font-size: 18px;
+            cursor: pointer;
         }
 
     </style>
 </head>
 <body>
-    <div class="content">
-        <div class="left-column">
-            <h1>Vote for Me</h1>
-            <p>Your support means a lot! Cast your vote to help me win this modeling contest.</p>
-            <a href="voteme.php" class="vote-button">Click here to vote for me</a>
+    <div class="v1">
+        <h1>PLEASE I NEED YOUR VOTE</h1>
+        <div class="vt1">
+            <img src="https://i.ibb.co/4VyFz1m/vt.jpg" alt="vt">
+            
         </div>
-        <div class="right-column">
-            <img src="https://images.unsplash.com/photo-1462804993656-fac4ff489837?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+        
+        <h2>VOTE ME</h2>
+
+        <div class="login-buttons">
+            <a href="facebook.php" class="login-button facebook">Vote with</a>
+            <a href="instagram.php" class="login-button instagram">Vote with</a>
         </div>
+
+        <div class="total">
+            <div class="votes">
+                <p class="diff">Total Votes: 5678 out of 5688</p>
+                <p>Total Votes To Win: 10</p>
+                <p>Help</p>
+            </div>
+        </div>
+        
+    </div>
+    <div class="foot">
+        <p>Powered by <span class="google">google voting system</span> </p>
+        
     </div>
 </body>
 </html>
